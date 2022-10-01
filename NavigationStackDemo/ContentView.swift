@@ -1,21 +1,19 @@
-//
-//  ContentView.swift
-//  NavigationStackDemo
-//
-//  Created by Mark Volkmann on 9/30/22.
-//
-
 import SwiftUI
 
+// This is based on the Stewart Lynch video at
+// https://www.youtube.com/watch?v=6-OeaFfDXXw
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView() {
+            NavigationStackDemo()
+                .tabItem {
+                Label("NavigationStack", systemImage: "1.circle.fill")
+            }
+            NavigationLinksDemo()
+                .tabItem {
+                Label("NavigationLinks", systemImage: "2.circle.fill")
+            }
         }
-        .padding()
     }
 }
 
