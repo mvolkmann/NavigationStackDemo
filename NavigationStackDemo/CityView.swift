@@ -2,6 +2,8 @@ import Charts
 import SwiftUI
 
 struct CityView: View {
+    @EnvironmentObject var router: Router
+
     var city: City
 
     var body: some View {
@@ -28,6 +30,11 @@ struct CityView: View {
             }
             .chartLegend(.hidden)
             .padding()
+
+            Button("Back to Countries") {
+                router.reset()
+            }
+            .buttonStyle(.borderedProminent)
         }
         .navigationTitle("City")
         .navigationBarTitleDisplayMode(.inline)

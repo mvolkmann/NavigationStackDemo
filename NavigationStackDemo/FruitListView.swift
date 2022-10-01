@@ -8,7 +8,7 @@ struct FruitView: View {
     }
 }
 
-struct NavigationStackDemo: View {
+struct FruitListView: View {
     let fruits = ["🍎", "🍐", "🍋", "🍑", "🍌", "🍉", "🍇", "🍒", "🫐", "🍓"]
 
     var body: some View {

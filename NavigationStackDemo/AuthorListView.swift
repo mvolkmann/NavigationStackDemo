@@ -17,7 +17,7 @@ struct Author: Hashable, Identifiable {
     }
 }
 
-struct NavigationLinksDemo: View {
+struct AuthorListView: View {
     // Use this approach when all the NavigationLink values have the same type.
     // @State private var path: [Author] = []
 

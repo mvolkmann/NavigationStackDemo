@@ -4,19 +4,19 @@ import SwiftUI
 // https://www.youtube.com/watch?v=6-OeaFfDXXw
 struct ContentView: View {
     var body: some View {
-        TabView() {
-            NavigationStackDemo()
+        TabView {
+            FruitListView()
                 .tabItem {
-                Label("NavigationStack", systemImage: "1.circle.fill")
-            }
-            NavigationLinksDemo()
+                    Label("Fruits", systemImage: "1.circle.fill")
+                }
+            AuthorListView()
                 .tabItem {
-                Label("NavigationLinks", systemImage: "2.circle.fill")
-            }
-            DeepLinksDemo()
+                    Label("Authors", systemImage: "2.circle.fill")
+                }
+            CountryListView()
                 .tabItem {
-                Label("Deep Links", systemImage: "3.circle.fill")
-            }
+                    Label("Countries", systemImage: "3.circle.fill")
+                }
         }
     }
 }
