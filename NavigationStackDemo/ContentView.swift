@@ -13,6 +13,10 @@ struct ContentView: View {
                 .tabItem {
                 Label("NavigationLinks", systemImage: "2.circle.fill")
             }
+            DeepLinksDemo()
+                .tabItem {
+                Label("Deep Links", systemImage: "3.circle.fill")
+            }
         }
     }
 }
