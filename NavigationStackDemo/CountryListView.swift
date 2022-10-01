@@ -2,6 +2,7 @@ import SwiftUI
 
 struct CountryListView: View {
     @EnvironmentObject var router: Router
+
     var body: some View {
         NavigationStack(path: $router.path) {
             List(Country.countries) { country in

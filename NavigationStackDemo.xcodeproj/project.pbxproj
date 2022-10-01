@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1E3EC728E8927600DC6E2E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1A1E3EC628E8927600DC6E2E /* README.md */; };
 		1A97ABE928E7BC8500BB33B7 /* NavigationStackDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A97ABE828E7BC8500BB33B7 /* NavigationStackDemoApp.swift */; };
 		1A97ABEB28E7BC8500BB33B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A97ABEA28E7BC8500BB33B7 /* ContentView.swift */; };
 		1A97ABED28E7BC8700BB33B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A97ABEC28E7BC8700BB33B7 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		1A1E3EC528E8807800DC6E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1A1E3EC628E8927600DC6E2E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1A97ABE528E7BC8500BB33B7 /* NavigationStackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationStackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A97ABE828E7BC8500BB33B7 /* NavigationStackDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackDemoApp.swift; sourceTree = "<group>"; };
 		1A97ABEA28E7BC8500BB33B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		1A97ABDC28E7BC8500BB33B7 = {
 			isa = PBXGroup;
 			children = (
+				1A1E3EC628E8927600DC6E2E /* README.md */,
 				1A97ABE728E7BC8500BB33B7 /* NavigationStackDemo */,
 				1A97ABE628E7BC8500BB33B7 /* Products */,
 			);
@@ -148,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1E3EC728E8927600DC6E2E /* README.md in Resources */,
 				1A97ABF028E7BC8700BB33B7 /* Preview Assets.xcassets in Resources */,
 				1A97ABED28E7BC8700BB33B7 /* Assets.xcassets in Resources */,
 			);
