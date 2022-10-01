@@ -23,6 +23,7 @@ struct NavigationStackDemoApp: App {
                             if let matchedCity = matchedCountry.cities
                                 .first(where: { $0.name == city }) {
                                 router.path.append(matchedCity)
+                                // TODO: This only works if on tab #3 already!
                             }
                         }
                     }
