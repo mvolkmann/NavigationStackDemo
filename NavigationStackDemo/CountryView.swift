@@ -14,9 +14,17 @@ struct CountryView: View {
                 Spacer()
                 Text("Population: \(country.population)")
             }
-            Spacer()
+
+            List(country.cities) { city in
+                NavigationLink(value: city) {
+                    Text(city.name)
+                }
+            }
         }
         .padding()
         .navigationTitle("Country")
+        .navigationDestination(for: City.self) { city in
+            CityView(city: city)
+        }
     }
 }
