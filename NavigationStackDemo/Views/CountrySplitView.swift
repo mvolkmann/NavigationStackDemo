@@ -39,8 +39,8 @@ struct CountrySplitView: View {
     private var detail: some View {
         VStack {
             if let selectedCity {
-                CityView(city: selectedCity)
-            } else if let selectedCountry {
+                CityView(city: selectedCity, canPop: false)
+            } else if selectedCountry != nil {
                 Text("Select a city.").font(.largeTitle)
             }
         }

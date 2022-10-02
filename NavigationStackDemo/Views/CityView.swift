@@ -5,6 +5,7 @@ struct CityView: View {
     @EnvironmentObject var router: Router
 
     var city: City
+    var canPop: Bool
 
     var body: some View {
         VStack {
@@ -43,14 +44,12 @@ struct CityView: View {
             .chartLegend(.hidden)
             .padding()
 
-            // This is only useful when using NavigationStack
-            // instead of NavigationSplitView.
-            /*
-             Button("Back to Countries") {
-                 router.reset()
-             }
-             .buttonStyle(.borderedProminent)
-             */
+            if canPop {
+                Button("Back to Countries") {
+                    router.reset()
+                }
+                .buttonStyle(.borderedProminent)
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ struct ContentView: View {
                 .tag("Authors")
             CountryStackView()
                 .tabItem {
-                    Label("Countries", systemImage: "3.circle.fill")
+                    Label("Countries Stack", systemImage: "3.circle.fill")
                 }
                 .tag("Countries Stack")
             CountrySplitView()
