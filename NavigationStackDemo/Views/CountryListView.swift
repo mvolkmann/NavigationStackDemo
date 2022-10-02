@@ -78,20 +78,6 @@ struct CountryListView: View {
     }
 
     var body: some View {
-        /* THIS WORKS!
-         NavigationStack(path: $router.path) {
-             List(Country.countries) { country in
-                 NavigationLink(value: country) {
-                     Text("\(country.flag) \(country.name)")
-                 }
-             }
-             .navigationDestination(for: Country.self) { country in
-                 CountryView(country: country)
-             }
-             .navigationTitle("Countries")
-         }
-          */
-
         // This renders a split view on an iPad, but uses a
         // NavigationStack on an iPhone, even in landscape mode.
         NavigationSplitView(

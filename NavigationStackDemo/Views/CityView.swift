@@ -43,7 +43,9 @@ struct CityView: View {
             .chartLegend(.hidden)
             .padding()
 
-            /* This is not useful when using NavigationSplitView.
+            // This is only useful when using NavigationStack
+            // instead of NavigationSplitView.
+            /*
              Button("Back to Countries") {
                  router.reset()
              }
