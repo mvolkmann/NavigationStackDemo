@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CountryListView: View {
+struct CountrySplitView: View {
     @EnvironmentObject var router: Router
     @State private var countryFilter = ""
     @State private var selectedCity: City?
