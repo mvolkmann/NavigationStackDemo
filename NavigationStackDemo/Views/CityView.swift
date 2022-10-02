@@ -29,8 +29,6 @@ struct CityView: View {
                         Text(city.population)
                     }
                 }
-                .padding()
-                .border(.primary)
                 .font(.title2)
             }
             .frame(height: 220)

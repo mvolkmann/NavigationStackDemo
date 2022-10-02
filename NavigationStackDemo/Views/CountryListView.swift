@@ -8,13 +8,12 @@ struct CountryListView: View {
 
     // This is the middle view.
     private var content: some View {
-        VStack {
+        VStack(alignment: .leading) {
             if let selectedCountry {
                 Text(
-                    "in \(selectedCountry.name) \(selectedCountry.flag)"
+                    "\(selectedCountry.flag) \(selectedCountry.name)"
                 )
                 .font(.title2)
-                .border(.red)
                 HStack {
                     Spacer()
                     Text("Population: \(selectedCountry.population)")
@@ -31,6 +30,7 @@ struct CountryListView: View {
                 Text("Select a country.").font(.largeTitle)
             }
         }
+        .padding()
         .navigationTitle("Cities")
         .navigationBarTitleDisplayMode(.inline)
     }

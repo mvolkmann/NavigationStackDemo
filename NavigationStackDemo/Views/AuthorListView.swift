@@ -63,7 +63,7 @@ struct AuthorListView: View {
                 }
             }
 
-            .navigationTitle("NavigationLinks")
+            .navigationTitle("Authors")
         }
     }
 }

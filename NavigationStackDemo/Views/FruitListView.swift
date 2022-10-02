@@ -28,7 +28,7 @@ struct FruitListView: View {
             .navigationDestination(for: String.self) { item in
                 FruitView(item: item)
             }
-            .navigationTitle("Fruit of the Day")
+            .navigationTitle("Fruits")
             .padding()
         }
     }

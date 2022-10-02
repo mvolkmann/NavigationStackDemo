@@ -24,13 +24,13 @@ struct Country: Hashable, Identifiable {
             .init(
                 name: "Mexico",
                 flag: "🇲🇽",
-                population: 128_830,
+                population: 129_829_800,
                 cities: City.inCountry("Mexico")
             ),
             .init(
                 name: "United States",
                 flag: "🇺🇸",
-                population: 332_278_200,
+                population: 331_893_745,
                 cities: City.inCountry("United States")
             ),
             .init(
