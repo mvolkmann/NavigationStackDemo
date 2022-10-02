@@ -1,5 +1,18 @@
 # NavigationStackDemo
 
+This application demonstrates the new navigation API added in iOS 16.
+
+<img href="images/swiftui-navigation-01-fruits.png" />
+<img href="images/swiftui-navigation-02-fruit.png" />
+<img href="images/swiftui-navigation-03-authors.png" />
+<img href="images/swiftui-navigation-04-author.png" />
+<img href="images/swiftui-navigation-05-stack.png" />
+<img href="images/swiftui-navigation-06-stack.png" />
+<img href="images/swiftui-navigation-07-stack.png" />
+<img href="images/swiftui-navigation-08-split.png" />
+<img href="images/swiftui-navigation-09-split.png" />
+<img href="images/swiftui-navigation-10-split.png" />
+
 This supports navigation via a URL.
 To create a URL scheme:
 
