@@ -13,15 +13,28 @@ struct CityView: View {
                     Text("🌟")
                         .font(.system(size: 200))
                 }
-                HStack {
-                    Text("\(city.name), \(city.country)")
-                        .font(.title2)
+                Grid {
+                    GridRow(alignment: .top) {
+                        Text("City Name:").bold().gridColumnAlignment(.trailing)
+                        Text(city.name).gridColumnAlignment(.leading)
+                    }
+                    // The remaining GridRows inherit column alignments
+                    // from the first GridRow.
+                    GridRow(alignment: .top) {
+                        Text("Country:").bold()
+                        Text(city.country)
+                    }
+                    GridRow(alignment: .top) {
+                        Text("Population:").bold()
+                        Text(city.population)
+                    }
                 }
+                .border(.primary)
+                .font(.title2)
             }
             .frame(height: 220)
 
             Chart(city.fellowCities) { city in
-
                 BarMark(
                     x: .value("City", city.name),
                     y: .value("Population", city.population)

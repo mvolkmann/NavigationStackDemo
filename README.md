@@ -15,10 +15,15 @@ To create a URL scheme:
 - "Role" can keep the default value of "Editor".
 - In the App subclass, add the "onOpenURL" view modifier to the initial view
   (ContentView here).
+- Launch the Simulator.  The app does not need to be running in the Simulator.
 - In a terminal window, enter a command like these:
 
   - `xcrun simctl openurl booted NavStack://Canada`
   - `xcrun simctl openurl booted NavStack://Canada/Vancover`
+  
+- The URLs above can also be links in an email or reminder.
+  Clicking these links will launch the app if it is not already running
+  and will navigate to the appropriate navigation path.  
   
 - The app will ask for permission to receive a URL
   the first time a request is received.
