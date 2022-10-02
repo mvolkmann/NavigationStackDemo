@@ -29,6 +29,7 @@ struct CityView: View {
                         Text(city.population)
                     }
                 }
+                .padding()
                 .border(.primary)
                 .font(.title2)
             }
@@ -44,12 +45,12 @@ struct CityView: View {
             .chartLegend(.hidden)
             .padding()
 
-            Button("Back to Countries") {
-                router.reset()
-            }
-            .buttonStyle(.borderedProminent)
+            /* This is not useful when using NavigationSplitView.
+             Button("Back to Countries") {
+                 router.reset()
+             }
+             .buttonStyle(.borderedProminent)
+             */
         }
-        .navigationTitle("City")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }

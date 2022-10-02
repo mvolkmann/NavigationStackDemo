@@ -3,12 +3,78 @@ import SwiftUI
 struct CountryListView: View {
     @EnvironmentObject var router: Router
     @State private var countryFilter = ""
+    @State private var selectedCity: City?
+    @State private var selectedCountry: Country?
+
+    // This is the middle view.
+    private var content: some View {
+        VStack {
+            if let selectedCountry {
+                Text(
+                    "in \(selectedCountry.name) \(selectedCountry.flag)"
+                )
+                .font(.title2)
+                .border(.red)
+                HStack {
+                    Spacer()
+                    Text("Population: \(selectedCountry.population)")
+                }
+
+                List(
+                    selectedCountry.cities,
+                    id: \.self,
+                    selection: $selectedCity
+                ) { city in
+                    Text(city.name)
+                }
+            } else {
+                Text("Select a country.").font(.largeTitle)
+            }
+        }
+        .navigationTitle("Cities")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+
+    // This is the right view.
+    private var detail: some View {
+        VStack {
+            if let selectedCity {
+                CityView(city: selectedCity)
+            } else if let selectedCountry {
+                Text("Select a city.").font(.largeTitle)
+            }
+        }
+        .navigationTitle("Selected City")
+        .navigationBarTitleDisplayMode(.inline)
+    }
 
     private var filteredCountries: [Country] {
         guard !countryFilter.isEmpty else { return Country.countries }
         return Country.countries.filter {
             $0.name.lowercased().contains(countryFilter.lowercased())
         }
+    }
+
+    // This is the left view.
+    private var sidebar: some View {
+        List(
+            filteredCountries,
+            selection: $selectedCountry
+        ) { country in
+            NavigationLink(value: country) {
+                Text("\(country.flag) \(country.name)")
+            }
+        }
+        .navigationTitle("Countries")
+        .navigationBarTitleDisplayMode(.inline)
+
+        // This adds a search input above the list
+        // that can be used to filter the list
+        .searchable(text: $countryFilter)
+
+        // This prevents the first character entered in the search input
+        // from being changed to uppercase.
+        .autocapitalization(.none)
     }
 
     var body: some View {
@@ -26,40 +92,21 @@ struct CountryListView: View {
          }
           */
 
-        // This only renders a split view on an iPad.
-        // On an iPhone it uses a NavigationStack, even in landscape mode.
-        NavigationSplitView(columnVisibility: .constant(.all)) {
-            List(
-                filteredCountries,
-                selection: $router.selectedCountry
-            ) { country in
-                NavigationLink(value: country) {
-                    Text("\(country.flag) \(country.name)")
-                }
-            }
-            .navigationTitle("Countries")
+        // This renders a split view on an iPad, but uses a
+        // NavigationStack on an iPhone, even in landscape mode.
+        NavigationSplitView(
+            columnVisibility: .constant(.all),
+            sidebar: { sidebar },
+            content: { content },
+            detail: { detail }
+        )
 
-            // This adds a search input above the list
-            // that can be used to filter the list
-            .searchable(text: $countryFilter)
-
-            // This prevents the first character entered in the search input
-            // from being changed to uppercase.
-            .autocapitalization(.none)
-        } detail: {
-            if let country = router.selectedCountry {
-                CountryView(country: country)
-            } else {
-                Text("Select a country.").font(.largeTitle)
-            }
-        }
         // This makes it so the left nav to does not overlap the detail area.
         .navigationSplitViewStyle(.balanced)
-        // TODO: Fix this.
-        /*
-         .onChange(of: $router.selectedCountry) { _ in
-             router.selectedCity = nil
-         }
-         */
+
+        // When a new country is selected, clear the city selection.
+        .onChange(of: selectedCountry) { _ in
+            selectedCity = nil
+        }
     }
 }

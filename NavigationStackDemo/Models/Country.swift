@@ -31,7 +31,7 @@ struct Country: Hashable, Identifiable {
                 name: "United States",
                 flag: "🇺🇸",
                 population: 332_278_200,
-                cities: City.inCountry("United State")
+                cities: City.inCountry("United States")
             ),
             .init(
                 name: "United Kingdom",

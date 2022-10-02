@@ -2,9 +2,7 @@ import SwiftUI
 
 class Router: ObservableObject {
     @Published var path = NavigationPath()
-    @Published var selectedCity: City?
-    @Published var selectedCountry: Country?
-    @Published var selectedTab: String = "Fruits"
+    @Published var selectedTab: String = "Countries"
 
     func reset() {
         path = NavigationPath()
