@@ -28,7 +28,7 @@ The app has four tabs.
 The first tab "Fruits" uses a `NavigationStack` to allow the user
 to select a fruit from a `List` of `NavigationLink` views.
 
-<img alt="Fruits List" href="images/swiftui-navigation-01-fruits.png" />
+![Fruits List](images/swiftui-navigation-01-fruits.png)
 
 When a fruit is selected, a view that displays "You chose {fruit-emoji}."
 is pushed onto the navigation stack.
