@@ -33,7 +33,7 @@ to select a fruit from a `List` of `NavigationLink` views.
 When a fruit is selected, a view that displays "You chose {fruit-emoji}."
 is pushed onto the navigation stack.
 
-<img alt="Fruits Detail" href="images/swiftui-navigation-02-fruit.png" />
+![Fruits Detail](images/swiftui-navigation-02-fruit.png)
 
 Click "< Fruits" in the upper-left to return to the list of fruits.
 The "Show Favorite" button at the bottom demonstrates a `NavigationList`
@@ -47,12 +47,12 @@ that takes advantage of the fact that the only registered
 The second tab "Authors" uses a `NavigationStack` to allow the user
 to select an `Author` from a `List` of `NavigationLink` views.
 
-<img alt="Authors List" href="images/swiftui-navigation-03-authors.png" />
+![Authors List](images/swiftui-navigation-03-authors.png)
 
 When an author is selected, a view that displays specific information
 about the author is pushed onto the navigation stack.
 
-<img alt="Author Detail" href="images/swiftui-navigation-04-author.png" />
+![Author Detail](images/swiftui-navigation-04-author.png)
 
 There are four `navigationDestination` registrations that handle the types:
 
@@ -69,12 +69,12 @@ and displays information about that author.
 The third tab "Countries Stack" uses a `NavigationStack` to allow the user
 to select a `Country` from a `List` of `NavigationLink` views.
 
-<img alt="Countries List" href="images/swiftui-navigation-05-stack.png" />
+![Countries List](images/swiftui-navigation-05-stack.png)
 
 When a country is selected, a view that displays a list of
 cities in the country is pushed onto the navigation stack.
 
-<img alt="Cities List" href="images/swiftui-navigation-06-stack.png" />
+![Cities List](images/swiftui-navigation-06-stack.png)
 
 Each city is represented by a `NavigationLink`. Tapping one of these pushes
 a view onto the stack that displays detailed information about that city.
@@ -85,7 +85,7 @@ is displayed below the city data.
 The "Back to Countries" button demonstrates popping back to
 the initial view in this tab.
 
-<img alt="City Detail" href="images/swiftui-navigation-07-stack.png" />
+![City Detail](images/swiftui-navigation-07-stack.png)
 
 ### Countries Split tab
 
@@ -97,11 +97,11 @@ the second column contains a list of cities in the selected country,
 and the third column contains detail about the selected city.
 Having a "Back to Countries" button doesn't apply in this scenario.
 
-<img alt="Countries List" href="images/swiftui-navigation-08-split.png" />
+![Countries List](images/swiftui-navigation-08-split.png)
 
-<img alt="Cities List" href="images/swiftui-navigation-09-split.png" />
+![Cities List](images/swiftui-navigation-09-split.png)
 
-<img alt="City Detail" href="images/swiftui-navigation-10-split.png" />
+![City Detail](images/swiftui-navigation-10-split.png)
 
 ## Deep Linking
 
@@ -124,18 +124,17 @@ To configure use of URLs:
 
 - In the App subclass, add the "onOpenURL" view modifier to the initial view
   (ContentView here).
-  
+
 To test use of URLS:
-  
-- Launch the Simulator.  The app does not need to be running in the Simulator.
+
+- Launch the Simulator. The app does not need to be running in the Simulator.
 - In a terminal window, enter a command like these:
 
   - `xcrun simctl openurl booted NavStack://Canada`
   - `xcrun simctl openurl booted NavStack://Canada/Vancover`
-  
+
 - The URLs above can also be links in an email or reminder.
   Clicking these links will launch the app if it is not already running
-  and will navigate to the appropriate navigation path.  
-  
+  and will navigate to the appropriate navigation path.
 - The app will ask for permission to receive a URL
   the first time a request is received.
