@@ -105,7 +105,7 @@ Having a "Back to Countries" button doesn't apply in this scenario.
 
 ## Deep Linking
 
-This supports navigation via a URL.
+This app supports navigation via a URL.
 
 To create a URL scheme:
 
@@ -122,8 +122,8 @@ To create a URL scheme:
 
 To configure use of URLs:
 
-- In the App subclass, add the "onOpenURL" view modifier to the initial view
-  (ContentView here).
+- In the App subclass, add the `onOpenURL` view modifier to the initial view
+  (`ContentView` here).
 
 To test use of URLS:
 
