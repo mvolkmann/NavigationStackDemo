@@ -131,7 +131,7 @@ To test use of URLS:
 - In a terminal window, enter a command like these:
 
   - `xcrun simctl openurl booted NavStack://Canada`
-  - `xcrun simctl openurl booted NavStack://Canada/Vancover`
+  - `xcrun simctl openurl booted NavStack://Canada/Vancouver`
 
 - The URLs above can also be links in an email or reminder.
   Clicking these links will launch the app if it is not already running

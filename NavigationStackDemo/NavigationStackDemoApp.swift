@@ -22,9 +22,10 @@ struct NavigationStackDemoApp: App {
         if let matchedCountry = Country.countries.first(where: {
             $0.name == country
         }) {
-            router.selectedTab = "Countries"
+            router.selectedTab = "Countries Stack"
             router.reset()
             router.path.append(matchedCountry)
+
             if url.pathComponents.count == 2 {
                 let city = url.lastPathComponent
                 if let matchedCity = matchedCountry.cities
